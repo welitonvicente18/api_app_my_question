@@ -1,0 +1,11 @@
+services:
+    app_question:
+        build:
+            context: .
+            dockerfile: Dockerfile
+            args:
+                UID: 1000
+                GID: 1000
+        working_dir: /app
+        volumes:
+            - ".:/app"
