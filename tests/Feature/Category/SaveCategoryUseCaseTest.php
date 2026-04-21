@@ -64,7 +64,6 @@ class SaveCategoryUseCaseTest extends TestCase
         $this->expectException(CategoryException::class);
         $mockRepository = $this->createStub(CategoryRepository::class);
 
-
         $saveCategoryUseCase = new SaveCategoryUseCase($mockRepository);
         $saveCategoryUseCase->save(new CategoryDTO(
             null,
